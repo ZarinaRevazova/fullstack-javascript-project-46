@@ -5,7 +5,7 @@
 // импортируем (load) для YAML
 import load from 'js-yaml';
 
-const getFileParser = (data, format) => {
+const getFileInfo = (data, format) => {
   switch (format) {
     case '.json':
       return JSON.parse(data);
@@ -16,4 +16,4 @@ const getFileParser = (data, format) => {
   }
 };
 
-export default getFileParser;
+export default getFileInfo;
