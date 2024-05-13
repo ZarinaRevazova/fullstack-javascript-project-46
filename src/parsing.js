@@ -11,6 +11,8 @@ const getFileParser = (data, format) => {
       return JSON.parse(data);
     case '.yaml' || '.yml':
       return load(data);
+    default:
+      throw new Error(`Invalid extension - ${format}`);
   }
 };
 

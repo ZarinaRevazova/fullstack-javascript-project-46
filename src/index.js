@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import process from 'process';
-import getFileParser from './parsing.js';
+import getFileInfo from './parsing.js';
 
 // получаю полный путь до файла
 const getFilePath = (filepath) => path.resolve(process.cwd(), filepath);
@@ -15,8 +15,8 @@ const getFormat = (filepath) => path.extname(filepath);
 const genDiff = (filepath1, filepath2) => {
   const getDataFromFilepath1 = readFile(filepath1);
   const getDataFromFilepath2 = readFile(filepath2);
-  const getObjectFromFile1 = getFileParser(getDataFromFilepath1, getFormat(filepath1));
-  const getObjectFromFile2 = getFileParser(getDataFromFilepath2, getFormat(filepath2));
+  const getObjectFromFile1 = getFileInfo(getDataFromFilepath1, getFormat(filepath1));
+  const getObjectFromFile2 = getFileInfo(getDataFromFilepath2, getFormat(filepath2));
   console.log(getObjectFromFile1, getObjectFromFile2);
 };
 
