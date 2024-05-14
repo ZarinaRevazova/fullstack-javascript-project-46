@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import process from 'process';
 import getFileInfo from './parsing.js';
+import compareData from './compareData.js';
 
 // получаю полный путь до файла
 const getFilePath = (filepath) => path.resolve(process.cwd(), filepath);
@@ -17,7 +18,8 @@ const genDiff = (filepath1, filepath2) => {
   const getDataFromFilepath2 = readFile(filepath2);
   const getObjectFromFile1 = getFileInfo(getDataFromFilepath1, getFormat(filepath1));
   const getObjectFromFile2 = getFileInfo(getDataFromFilepath2, getFormat(filepath2));
-  console.log(getObjectFromFile1, getObjectFromFile2);
+  const result = compareData(getObjectFromFile1, getObjectFromFile2);
+  return result;
 };
 
 export default genDiff;
