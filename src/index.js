@@ -12,7 +12,7 @@ const readFile = (filepath) => fs.readFileSync(getFilePath(filepath), 'utf-8');
 // определяем формат файла
 const getFormat = (filepath) => path.extname(filepath);
 
-// основная функция приложения genDiff => чтение файлов -> парсинг -> подготовка к их дальнейшему сравнению
+// основная функция приложения genDiff => чтение файлов -> парсинг -> сравнение файлов с выводом строки
 const genDiff = (filepath1, filepath2) => {
   const getDataFromFilepath1 = readFile(filepath1);
   const getDataFromFilepath2 = readFile(filepath2);
