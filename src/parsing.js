@@ -9,7 +9,9 @@ const getFileInfo = (data, format) => {
   switch (format) {
     case '.json':
       return JSON.parse(data);
-    case '.yaml' || '.yml':
+    case '.yaml':
+      return load(data);
+    case '.yml':
       return load(data);
     default:
       throw new Error(`Invalid extension - ${format}`);
