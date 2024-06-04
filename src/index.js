@@ -4,17 +4,17 @@ import process from 'process';
 import getFileInfo from './parsing.js';
 import stringifyComparedData from './compareData.js';
 
-const user = '/Users/ZARINA/fullstack-javascript-project-46/__fixtures__/file1.json';
+//const user = '/Users/ZARINA/fullstack-javascript-project-46/__fixtures__/file1.json';
 
 // получаю полный путь до файла
 //process.cwd() - возвращает директорию из которой запуoty node.js файл.
 const getFilePath = (filepath) => path.resolve(process.cwd(), filepath);
-console.log(getFilePath(user));
+//console.log(getFilePath(user));
 // result: /Users/ZARINA/fullstack-javascript-project-46/__fixtures__/file1.json
 // чтение фала: использую функцию fs.readFileSync(path[, options]) - path беру из getFilePath, также
 // дополнительно использую options-кодировку <utf-8>
 const readFile = (filepath) => fs.readFileSync(getFilePath(filepath), 'utf-8');
-console.log(readFile(user));
+//console.log(readFile(user));
 // result: {
 //"host": "hexlet.io",
 //"timeout": 50,
@@ -23,7 +23,7 @@ console.log(readFile(user));
 //}
 // определяем формат файла
 const getFormat = (filepath) => path.extname(filepath);
-console.log(getFormat(user));
+//console.log(getFormat(user));
 //result: .json
 
 // основная функция приложения genDiff => чтение файлов -> парсинг -> сравнение файлов с выводом строки
