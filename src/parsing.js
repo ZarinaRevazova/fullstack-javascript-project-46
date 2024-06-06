@@ -3,16 +3,16 @@
 
 // JSON.parse() уже встроен в Node.js
 // импортируем (load) для YAML
-import load from 'js-yaml';
+import yaml from 'js-yaml';
 
 const getFileInfo = (data, format) => {
   switch (format) {
-    case '.json':
+    case 'json':
       return JSON.parse(data);
-    case '.yaml':
-      return load(data);
-    case '.yml':
-      return load(data);
+    case 'yaml':
+      return yaml.load(data);
+    case 'yml':
+      return yaml.load(data);
     default:
       throw new Error(`Invalid extension - ${format}`);
   }

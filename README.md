@@ -7,3 +7,5 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/7233efbed0932e803116/test_coverage)](https://codeclimate.com/github/ZarinaRevazova/fullstack-javascript-project-46/test_coverage)
 
 [![asciicast](https://asciinema.org/a/gh3JRkFD1I4AAyc7KEudRQhsk.svg)](https://asciinema.org/a/gh3JRkFD1I4AAyc7KEudRQhsk)
+
+[![asciicast](https://asciinema.org/a/pHLD5M17TtxPfSZ6RsSDeVJuQ.svg)](https://asciinema.org/a/pHLD5M17TtxPfSZ6RsSDeVJuQ)

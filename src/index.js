@@ -11,7 +11,7 @@ import stringifyComparedData from './compareData.js';
 const getFilePath = (filepath) => path.resolve(process.cwd(), filepath);
 //console.log(getFilePath(user));
 // result: /Users/ZARINA/fullstack-javascript-project-46/__fixtures__/file1.json
-// чтение фала: использую функцию fs.readFileSync(path[, options]) - path беру из getFilePath, также
+// чтение файла: использую функцию fs.readFileSync(path[, options]) - path беру из getFilePath, также
 // дополнительно использую options-кодировку <utf-8>
 const readFile = (filepath) => fs.readFileSync(getFilePath(filepath), 'utf-8');
 //console.log(readFile(user));
@@ -22,7 +22,7 @@ const readFile = (filepath) => fs.readFileSync(getFilePath(filepath), 'utf-8');
 //"follow": false
 //}
 // определяем формат файла
-const getFormat = (filepath) => path.extname(filepath);
+const getFormat = (filepath) => path.extname(filepath).slice(1);
 //console.log(getFormat(user));
 //result: .json
 
