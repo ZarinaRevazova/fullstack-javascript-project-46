@@ -10,10 +10,10 @@ program
   .version('1.0.0', '-V, --version', 'output the version number')
   .argument('<filepath1>')
   .argument('<filepath2>')
-  .option('-f, --format [type]', 'output format')
-  .action((filepath1, filepath2) => {
-    console.log(genDiff(filepath1, filepath2)); // далее, тут будет еще один аргумент - format (.options),
-    //и в основную ф-ю его также добавить!!!
+  .option('-f, --format [type]', 'output format', 'stylish')
+  .action((filepath1, filepath2, option) => {
+    const diff = genDiff(filepath1, filepath2, option.format);
+    console.log(diff);
   });
 
 program.parse();

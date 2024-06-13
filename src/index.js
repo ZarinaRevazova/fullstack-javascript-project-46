@@ -2,7 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import process from 'process';
 import getFileInfo from './parsing.js';
-import stringifyComparedData from './compareData.js';
+import treeBuilder from './makeDataTree.js';
+import chooseFormat from '../src/formatters/index.js';
 
 //const user = '/Users/ZARINA/fullstack-javascript-project-46/__fixtures__/file1.json';
 
@@ -27,13 +28,13 @@ const getFormat = (filepath) => path.extname(filepath).slice(1);
 //result: .json
 
 // основная функция приложения genDiff => чтение файлов -> парсинг -> сравнение файлов с выводом строки
-const genDiff = (filepath1, filepath2) => {
+const genDiff = (filepath1, filepath2, format = 'stylish') => {
   const getDataFromFilepath1 = readFile(filepath1);
   const getDataFromFilepath2 = readFile(filepath2);
   const getObjectFromFile1 = getFileInfo(getDataFromFilepath1, getFormat(filepath1));
   const getObjectFromFile2 = getFileInfo(getDataFromFilepath2, getFormat(filepath2));
-  const result = stringifyComparedData(getObjectFromFile1, getObjectFromFile2);
-  return result;
+  const diff = treeBuilder(getObjectFromFile1, getObjectFromFile2);
+  return chooseFormat(diff, format);
 };
 
 export default genDiff;
