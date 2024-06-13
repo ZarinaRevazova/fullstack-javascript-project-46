@@ -44,3 +44,6 @@ const stylish = (node, depth = 0) => {
 };
 
 export default stylish;
+
+//gendiff __fixtures__/file1.json __fixtures__/file2.json
+//gendiff __fixtures__/file1.yaml __fixtures__/file2.yaml
