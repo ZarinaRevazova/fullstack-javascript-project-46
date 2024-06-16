@@ -63,7 +63,7 @@ Options:
 - plain
 - json
 
-`<filename1>` and `<filename2>` are the paths to your files from directory **fixtures**
+`<filename1>` and `<filename2>` are the names of your files from directory `__fixtures__`
 
 ---
 
@@ -83,22 +83,22 @@ Options:
 
 ---
 
-:movie*camera: Comparison of two flat YAML_files + \_make test*
+:movie_camera: Comparison of two flat YAML_files + \_make test\*
 
 [![asciicast](https://asciinema.org/a/pHLD5M17TtxPfSZ6RsSDeVJuQ.svg)](https://asciinema.org/a/pHLD5M17TtxPfSZ6RsSDeVJuQ)
 
 ---
 
-:movie*camera: STYLISH formatter_Comparison of two tree-structure JSON_files and YAML_files + \_make test*
+:movie_camera: STYLISH formatter_Comparison of two tree-structure JSON_files and YAML_files + \_make test\*
 
 [![asciicast](https://asciinema.org/a/jr3kjhRQJjJ6KJ2qDzS2ftTiN.svg)](https://asciinema.org/a/jr3kjhRQJjJ6KJ2qDzS2ftTiN)
 
 ---
 
-:movie*camera: PLAIN formatter_Comparison of two tree-structure JSON_files and YAML_files + \_make test*
+:movie_camera: PLAIN formatter_Comparison of two tree-structure JSON_files and YAML_files + \_make test\*
 [![asciicast](https://asciinema.org/a/ENkcl5J9PRH3hmPtS8JAB6J3O.svg)](https://asciinema.org/a/ENkcl5J9PRH3hmPtS8JAB6J3O)
 
 ---
 
-:movie*camera: JSON formatter_Comparison of two tree-structure JSON_files and YAML_files + \_make test*
+:movie_camera: JSON formatter_Comparison of two tree-structure JSON_files and YAML_files + \_make test\*
 [![asciicast](https://asciinema.org/a/w3Ns3BpebUeSXS7P3QxfOiiGp.svg)](https://asciinema.org/a/w3Ns3BpebUeSXS7P3QxfOiiGp)
