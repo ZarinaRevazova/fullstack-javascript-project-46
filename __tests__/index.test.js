@@ -17,7 +17,7 @@ const getFixtureFilePath = (filename) => path.join(__dirname, '..', '__fixtures_
 const readFixtureFile = (filename) => fs.readFileSync(getFixtureFilePath(filename), 'utf-8');
 
 const basicFileFormat = ['json', 'yaml', 'yml'];
-const outputFileFormat = ['stylish', 'plain'];
+const outputFileFormat = ['stylish', 'plain', 'json'];
 
 test.each(basicFileFormat)('gendiff_test_format', (format) => {
   const filepath1 = getFixtureFilePath(`file1.${format}`);
@@ -28,27 +28,3 @@ test.each(basicFileFormat)('gendiff_test_format', (format) => {
     expect(diffResult).toBe(expected);
   });
 });
-
-//
-//
-//
-//
-//
-//const tests = [
-//{
-//file1: 'file1.json',
-//file2: 'file2.json',
-//output: 'outputFile1and2JSON.txt',
-//},
-//];
-//test.each(tests)('gendiff_test_JSON', ({ file1, file2, output }) => {
-//const filepath1 = getFixtureFilePath(file1);
-//const filepath2 = getFixtureFilePath(file2);
-//const expected = readFixtureFile(output);
-//const result = genDiff(filepath1, filepath2);
-//expect(result).toBe(expected);
-//});
-
-//node-options=--no-warnings --experimental-vm-modules
-
-//gendiff __fixtures__/file1.yaml __fixtures__/file2.yaml
