@@ -17,13 +17,13 @@ const getFixtureFilePath = (filename) => path.join(__dirname, '..', '__fixtures_
 const readFixtureFile = (filename) => fs.readFileSync(getFixtureFilePath(filename), 'utf-8');
 
 const basicFileFormat = ['json', 'yaml', 'yml'];
-const outputFileFormat = ['stylish'];
+const outputFileFormat = ['stylish', 'plain'];
 
 test.each(basicFileFormat)('gendiff_test_format', (format) => {
   const filepath1 = getFixtureFilePath(`file1.${format}`);
   const filepath2 = getFixtureFilePath(`file2.${format}`);
   outputFileFormat.forEach((outputFileFormat) => {
-    const expected = readFixtureFile(`expectedStringNestedFiles.txt`);
+    const expected = readFixtureFile(`${outputFileFormat}ExpectedString.txt`);
     const diffResult = genDiff(filepath1, filepath2, outputFileFormat);
     expect(diffResult).toBe(expected);
   });
