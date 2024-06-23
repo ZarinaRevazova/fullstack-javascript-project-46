@@ -13,12 +13,10 @@ const compareData = (data1, data2) => {
     if (!_.has(data1, key)) {
       return { type: 'added', name: key, value: data2[key] };
     }
-    if (_.has(data1, key) && _.has(data2, key)) {
-      if (!_.isEqual(data2[key], data1[key])) {
-        return { type: 'changed', name: key, value1: data1[key], value2: data2[key] };
-      }
-      return { type: 'unchanged', name: key, value: data1[key] };
+    if (!_.isEqual(data2[key], data1[key])) {
+      return { type: 'changed', name: key, value1: data1[key], value2: data2[key] };
     }
+    return { type: 'unchanged', name: key, value: data1[key] };
   });
   return result;
 };
