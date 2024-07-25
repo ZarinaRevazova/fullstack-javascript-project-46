@@ -4,8 +4,6 @@ import { fileURLToPath } from 'url';
 import { test, expect, describe } from '@jest/globals';
 import genDiff from '../src/index.js';
 
-//fileURLToPath switch file-URl to absolute file-path.
-//__dirname - return path to current file catalog.
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 

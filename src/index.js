@@ -3,7 +3,7 @@ import * as path from 'node:path';
 import process from 'process';
 import getFileInfo from './parsing.js';
 import treeBuilder from './makeDataTree.js';
-import chooseFormat from '../src/formatters/index.js';
+import chooseFormat from './formatters/index.js';
 
 const getFilePath = (filepath) => path.resolve(process.cwd(), filepath);
 const readFile = (filepath) => fs.readFileSync(getFilePath(filepath), 'utf-8');
