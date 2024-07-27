@@ -13,7 +13,7 @@ const stringify = (value, depth = 1) => {
 };
 
 const stylish = (node, depth = 0) => {
-  const { 
+  const {
     type, name, value, value1, value2, children,
   } = node;
 
