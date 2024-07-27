@@ -15,7 +15,14 @@ const caseDeleted = (propertyPath) => `Property '${propertyPath}' was removed`;
 const caseChanged = (propertyPath, oldValue, newValue) => `Property '${propertyPath}' was updated. From ${stringify(oldValue)} to ${stringify(newValue)}`;
 
 const plain = (node, acc = []) => {
-  const { type, name, value, value1, value2, children } = node;
+  const {
+    type, 
+    name, 
+    value, 
+    value1, 
+    value2, 
+    children 
+  } = node;
   const makeKeysPath = [...acc, name];
   const propertyPath = makeKeysPath.join('.');
 
