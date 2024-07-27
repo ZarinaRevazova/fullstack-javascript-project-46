@@ -8,18 +8,13 @@ const stringify = (value, depth = 1) => {
     return `${value}`;
   }
   const valueData = Object.entries(value);
-  const resultOfValue = valueData.map(([key, val]) => {return `${currentIndent(depth)}${key}: ${stringify(val, depth + 1)}`});
+  const resultOfValue = valueData.map(([key, val]) => `${currentIndent(depth)}${key}: ${stringify(val, depth + 1)}`);
   return `{\n${resultOfValue.join('\n')}\n${currentIndent(depth - 1)}}`;
 };
 
 const stylish = (node, depth = 0) => {
   const { 
-    type, 
-    name, 
-    value, 
-    value1, 
-    value2, 
-    children
+    type, name, value, value1, value2, children,
   } = node;
 
   switch (type) {

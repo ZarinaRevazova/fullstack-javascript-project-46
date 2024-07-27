@@ -16,12 +16,7 @@ const caseChanged = (propertyPath, oldValue, newValue) => `Property '${propertyP
 
 const plain = (node, acc = []) => {
   const {
-    type, 
-    name, 
-    value, 
-    value1, 
-    value2, 
-    children 
+    type, name, value, value1, value2, children,
   } = node;
   const makeKeysPath = [...acc, name];
   const propertyPath = makeKeysPath.join('.');
